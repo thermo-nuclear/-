@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+double f (double x)
+{
+    return (tan (x) - x);
+}
+
+int main()
+{
+    double a, b, c, dx;
+    int i, p;
+    scanf ("%lf %lf", &a, &b);
+    if (a > b)
+    {
+        a = c;
+        a = b;
+        b = c;
+    }
+    dx = 0.1;
+    p = 1;
+    c = a;
+    while (p <= 10)
+    {
+        if (f(c) * f(c + dx) > 0 && c + dx < b)
+        {
+            if (f(c) * f(c + dx) > 100)
+            {
+                c = c + 0.2;
+            }
+            else
+            {
+                c = c + dx;
+            }
+        }
+        else
+        {
+            dx = dx / 10;
+            p = p + 1;
+        }
+    }
+    printf ("%lf", c);
+    return 0;
+}
