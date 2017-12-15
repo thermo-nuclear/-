@@ -27,7 +27,7 @@ int main()
     for (i = 1; i < n; i++)
     {
         cur = n + 1;
-        min = 1000000000000;
+        min = len (x[0], x[1], y[0], y[1]);
         for (j = 0; j <= n; j++)
         {
             if (len (x[last], x[j], y[last], y[j]) < min && del [j] == 0 && j != last)
