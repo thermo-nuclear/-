@@ -9,16 +9,16 @@ double len (double x1, double x2, double y1, double y2)
 
 int main()
 {
-    double x[4], y[4], l1, l2, l3, m1, m2;
+    double x[4], y[4], l1, l2, l3;
     int i;
-    for (i=0; i<4; i++)
+    for (i = 0; i < 4; i++)
     {
         scanf ("%lf", &x[i]);
-        scanf ("%lf\n", &y[i]);
+        scanf ("%lf", &y[i]);
     }
-    l1 = len (x[0], x[1], y[0], y[1]); printf ("%lf ", l1);
-    l2 = len (x[0], x[2], y[0], y[2]); printf ("%lf ", l2);
-    l3 = len (x[0], x[3], y[0], y[3]); printf ("%lf ", l3);
+    l1 = len (x[0], x[1], y[0], y[1]);
+    l2 = len (x[0], x[2], y[0], y[2]);
+    l3 = len (x[0], x[3], y[0], y[3]);
     if (l1*l2 < l1*l3 && l1*l2 < l2*l3)
     {
         printf ("%lf", l1*l2);
@@ -31,7 +31,5 @@ int main()
     {
         printf ("%lf", l1*l3);
     }
-
-    printf ("%lf", m1*m2);
     return 0;
 }
